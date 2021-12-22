@@ -268,6 +268,12 @@
             margin-top: 30px;
             border-radius: 3px;
             color: white;
+            cursor: pointer;
+            transition: all ease .3s;
+        }
+        
+        .download:hover {
+            background-color: black;
         }
         /* second page main1 end */
         
@@ -975,7 +981,12 @@
             margin-left: 20px;
             margin-top: 20px;
             color: white;
-            border: none;
             cursor: pointer;
             border-radius: 2px;
+            transition: all .3s linear;
+            text-transform: uppercase;
+        }
+        
+        .boxright button:hover {
+            background-color: black;
         }
