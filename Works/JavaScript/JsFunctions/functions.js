@@ -57,6 +57,34 @@ function square(a) {
 }
 square(5)
 
+function isGreaterThan(a, b) {
+    if (a > b) {
+        a = true
+        console.log(a);
+        return true
+    }
+}
+isGreaterThan(3, 2)
+
+function isLessThan(a, b) {
+    if (a < b) {
+        a = true
+        console.log(a);
+        return true
+    }
+}
+isLessThan(3, 4)
+
+function areEqual(a, b) {
+    if (a = b) {
+        a = true
+
+        console.log(a);
+        return true
+    }
+}
+areEqual(5, 5)
+
 
 function minimum(a, b) {
     if (a > b) {
