@@ -10,7 +10,7 @@ function increase(a) {
     console.log(c);
     return c
 }
-increase(3)
+increase(4)
 
 function decrease(a) {
 
@@ -153,4 +153,4 @@ function lettergrade(n) {
     }
 
 }
-lettergrade(100)
+lettergrade(69)
