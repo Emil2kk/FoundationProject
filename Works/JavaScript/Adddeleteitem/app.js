@@ -7,20 +7,12 @@ function getUserData(event) {
     let date = document.querySelector('input[name=date]').value
     table.innerHTML += ` 
 
-    <tr>
+    <tr >
                 <td>${ad}</td>
                 <td>${soyad}</td>
                 <td>${email}</td>
                 <td>${date}</td>
-                <td><a href=#' ">Sil</a></td>
-               
-            </tr>`
+                <td onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><a href=#' ">Sil</a></td></tr>`
 
 
 }
-
-// function removeAllChildNodes(tr) {
-//     while (tr.firstChild) {
-//         tr.removeChild(tr.firstChild);
-//     }
-// }
