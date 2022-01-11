@@ -1,0 +1,151 @@
+#box {
+    width: 480px;
+    height: 630px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#alt {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt1 {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt2 {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt3 {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt4 {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt5 {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt6 {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt7 {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt8 {
+    width: 158px;
+    height: 208px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#alt i {
+    display: none;
+    font-size: 40px;
+}
+
+#alt1 i {
+    display: none;
+    font-size: 40px;
+}
+
+#alt2 i {
+    display: none;
+    font-size: 40px;
+}
+
+#alt3 i {
+    display: none;
+    font-size: 40px;
+}
+
+#alt4 i {
+    display: none;
+    font-size: 40px;
+}
+
+#alt5 i {
+    display: none;
+    font-size: 40px;
+}
+
+#alt6 i {
+    display: none;
+    font-size: 40px;
+}
+
+#alt7 i {
+    display: none;
+    font-size: 40px;
+}
+
+#alt8 i {
+    display: none;
+    font-size: 40px;
+}

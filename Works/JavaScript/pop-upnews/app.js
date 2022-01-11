@@ -34,16 +34,12 @@ for (let category of categories) {
 for (let xeber of xeberler) {
     news.innerHTML += `
     
-    <div class="news-item" onclick="popup()">
+    <div class="news-item"  onclick="popup()">
             <img src="${xeber.sekil}" alt="">
             <h1>${xeber.basliq}</h1>
-        </div>
-        
 
-       `
+        </div>`
 }
-
-
 
 function showNews(elem) {
     let catName = elem.innerHTML;
@@ -51,12 +47,16 @@ function showNews(elem) {
     for (let xeber of xeberler) {
         if (xeber.category == catName) {
             news.innerHTML += `
-        
-        <div class="news-item" onclick="popup()">
-                <img src="${xeber.sekil}" alt="">
-                <h1>${xeber.basliq}</h1>
-            </div>
-       `
+
+    <
+    div class = "news-item" >
+        <
+        img src = "${xeber.sekil}"
+    alt = "" >
+        <
+        h1 > $ { xeber.basliq } < /h1> <
+        /div>
+    `
         }
     }
 }
@@ -65,28 +65,22 @@ function showAll() {
     for (let xeber of xeberler) {
         news.innerHTML += `
 
-            <
-            div class = "news-item"
-            onclick = "popup()" >
-                <
-                img src = "${xeber.sekil}"
-            alt = "" >
-                <
-                h1 > $ { xeber.basliq } < /h1> <
-                /div>
-            `
+    <div class = "news-item" >
+        < img src = "${xeber.sekil}"alt = "" >
+        < h1 > ${xeber.basliq } < /h1> 
+        </div>
+    `
     }
 }
 
 function popup() {
-    for (let xeber of xeberler) {
+    for (let xbr of xeberler) {
         news.innerHTML += `
-        <div class="modal">
-        <img src="${xeber.sekil}" alt="">
-        <h1>${xeber.basliq}</h1>
-        <p>${xeber.detal}</p>
-
-    </div> `
+         <div class = "modal" >
+        <img src = "${xbr.sekil}" alt = "" >
+        < h1 >" ${ xbr.basliq } "< /h1> 
+        < p > "${ xbr.detal } "< /p>
+    </div>`
 
 
         document.querySelector('.modal').style.display = 'flex'
