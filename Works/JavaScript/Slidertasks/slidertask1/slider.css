@@ -9,7 +9,7 @@ body {
 }
 
 .slider {
-    /* width: 1200px; */
+    width: 1200px;
     border: 1px solid white;
     position: relative;
     min-height: 160px;
@@ -21,14 +21,14 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     /* border: 1px solid red; */
-    /* width: calc(6*(1200px/2)); */
+    width: calc(6*(1200px/2));
     position: absolute;
     left: 0px;
     transition: all .3s linear;
 }
 
 .slider-item {
-    /* width: calc(1200px / 2 - 20px); */
+    width: calc(1200px / 2 - 20px);
     margin: 10px;
     box-sizing: border-box;
     height: 100px;
