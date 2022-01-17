@@ -4,4 +4,3 @@ try:
     print("Reqemdi")
 except ValueError:
     print("Reqem deyil")
-
