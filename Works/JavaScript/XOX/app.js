@@ -82,4 +82,5 @@ document.getElementById("alt8").addEventListener("click", function() {
 
 
     }
-})
+}) 
+ 
