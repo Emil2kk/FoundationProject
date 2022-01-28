@@ -110,21 +110,15 @@
         <div class="main2">
             <div class="mainbox1">
                 <h3>Experience</h3>
+                {%for single in exp%}
                 <div class="information">
-                    <span><i class="fas fa-calendar-week"></i>2017-2019</span>
-                    <h5>Web Designer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
+                    <span><i class="fas fa-calendar-week"></i>{{single.year}}</span>
+                    <h5>{{single.title}}</h5>
+                    <p>{{single.shorttext}}</p>
                 </div>
-                <div class="information">
-                    <span><i class="fas fa-calendar-week"></i>2017-2019</span>
-                    <h5>Web Designer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                </div>
-                <div class="information">
-                    <span><i class="fas fa-calendar-week"></i>2017-2019</span>
-                    <h5>Web Designer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                </div>
+                {% endfor%}
+
+
             </div>
             <div class="mainbox2">
                 <h3>Education</h3>
