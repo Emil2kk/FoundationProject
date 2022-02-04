@@ -17,6 +17,7 @@ class Experience(db.Model):
 
 
 
+
 @app.route('/',methods=["GET","POST"])
 def appmain():
     return render_template('index.html')

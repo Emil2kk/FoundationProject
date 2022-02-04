@@ -1,9 +1,9 @@
+from re import I
+from countries import olkeler
 
-def FindCity(cityname=):
-    
-    if cityname in olkeler:
-        print(cityname)
-    pass
+def FindCity(cityname):
+  
+  pass
 
 def FindCountry(countryname):
   # olke adi daxil edildiyi zaman o olkeye aid olan seherlerin adlarini ekranda gostersin
