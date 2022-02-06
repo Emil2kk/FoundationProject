@@ -25,8 +25,7 @@ class Virtualcard:
     def generateCode(self):
         if self.vpul >int(pul):
             print("daxil olunan mebleg yoxdur")
-        elif eval(bitistarixi)<eval(self.tarix):
-            print("verilen tarix esas kardin bitis tarixinden cox ola bilmez")
+       
         else:
             print("kartkodu:",self.kod ,"kartid:",self.id ,"daxil olunan pul:",self.vpul,"bitistarixi:",self.tarix)
             qalanpul=int(pul)-self.vpul
