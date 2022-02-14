@@ -111,32 +111,27 @@
             <div class="mainbox1">
                 <h3>Experience</h3>
 
-                <div class="information">
-                    <span><i class="fas fa-calendar-week"></i>sadad</span>
-                    <h5>sadad</h5>
-                    <p>asddad</p>
-                </div>
 
+                {% for exp in experience %}
+                <div class="information">
+                    <span><i class="fas fa-calendar-week"></i>{{exp.year}}</span>
+                    <h5>{{exp.tittle}}</h5>
+                    <p>{{exp.about}}</p>
+                </div>
+                {% endfor %}
 
 
             </div>
             <div class="mainbox2">
                 <h3>Education</h3>
+                {% for edu in education %}
                 <div class="information">
-                    <span><i class="fas fa-calendar-week"></i>2017-2019</span>
-                    <h5>Web Designer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
+                    <span><i class="fas fa-calendar-week"></i>{{edu.edu_year}}</span>
+                    <h5>{{edu.edu_tittle}}</h5>
+                    <p>{{edu.edu_about}}</p>
                 </div>
-                <div class="information">
-                    <span><i class="fas fa-calendar-week"></i>2017-2019</span>
-                    <h5>Web Designer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                </div>
-                <div class="information">
-                    <span><i class="fas fa-calendar-week"></i>2017-2019</span>
-                    <h5>Web Designer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                </div>
+                {% endfor %}
+
             </div>
 
         </div>
@@ -233,7 +228,7 @@
     <!-- second page end -->
     <section id="thirdpage">
         <div class="thirdheader">
-            <h3>MY <span>SERVICES</span></h3>
+            <!-- <h3>MY <span>SERVICES</span></h3>
             <div class="spanv"></div>
 
         </div>
@@ -278,8 +273,8 @@
         <div>
             <h2></h2>
             <p></p>
-        </div>
-        <!-- <div class="thirdmain2">
+        </div> -->
+            <!-- <div class="thirdmain2">
             <div class="pricelist">
                 <div class="pricetop">
                     <div class="priceicon"><i class="fas fa-user"></i></div>
@@ -350,87 +345,33 @@
 
 
         </div> -->
-        <div>
-            <h2></h2>
-        </div>
-        <div></div>
-        <div class="thirdmain3">
-            <div class="slider">
-
-                <div class="box1">
-                    <div class="avatar"><img src="/static/images/avatra-2.jpg" alt=""></div>
-                    <div>
-                        <p>Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
-                        <div class="undername">
-                            <h3>NANCY</h3>
-                            <small>CO founder</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="avatar"><img src="/images/avatra-2.jpg" alt=""></div>
-                    <div>
-                        <p>Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
-                        <div class="undername">
-                            <h3>NANCY</h3>
-                            <small>CO founder</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="avatar"><img src="/images/avatra-2.jpg" alt=""></div>
-                    <div>
-                        <p>Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
-                        <div class="undername">
-                            <h3>NANCY</h3>
-                            <small>CO founder</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="avatar"><img src="/images/avatra-2.jpg" alt=""></div>
-                    <div>
-                        <p>Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
-                        <div class="undername">
-                            <h3>NANCY</h3>
-                            <small>CO founder</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="avatar"><img src="/images/avatra-2.jpg" alt=""></div>
-                    <div>
-                        <p>Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
-                        <div class="undername">
-                            <h3>NANCY</h3>
-                            <small>CO founder</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="avatar"><img src="/images/avatra-2.jpg" alt=""></div>
-                    <div>
-                        <p>Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
-                        <div class="undername">
-                            <h3>NANCY</h3>
-                            <small>CO founder</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="avatar"><img src="/images/avatra-2.jpg" alt=""></div>
-                    <div>
-                        <p>Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
-                        <div class="undername">
-                            <h3>NANCY</h3>
-                            <small>CO founder</small>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <h2></h2>
             </div>
-            <div class="btns">
+            <div></div>
+            <div class="thirdmain3">
+                <div class="slider">
+
+                    {% for opinion in opinion %}
+                    <div class="box1">
+                        <div class="avatar"><img src="/static/uploads/{{opinion.opinion_img}}" alt=""></div>
+                        <div>
+                            <p>{{opinion.opinion_text}}</p>
+                            <div class="undername">
+                                <h5>{{opinion.opinion_name}}</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="btns"></div>
+
+
+
 
             </div>
+
 
         </div>
 
@@ -450,39 +391,23 @@
                 <div class="allmain">
                     <div class="portbox">
                         <div class="portimage">
+                            {% for work in portfolio %}
                             <div class="info">
-                                <img src="/images/portfolio-1.jpg" alt="">
-                                <div class="overlay">
-                                    <h1></h1>
-                                    <span>salam</span>
-                                </div>
+                                <img src="/static/uploads/{{work.portfolio_img}}" alt="">
+                                <a href="{{work.portfolio_link}}">
+                                    <div class="overlay">
+                                        <h1>{{work.portfolio_name}}</h1>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="info">
-                                <img src="/images/portfolio-1.jpg" alt="">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="info">
-                                <img src="/images/portfolio-1.jpg" alt="">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="info">
-                                <img src="/images/portfolio-1.jpg" alt="">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="info">
-                                <img src="/images/portfolio-1.jpg" alt="">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="info">
-                                <img src="/images/portfolio-1.jpg" alt="">
-                                <div class="overlay"></div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
+
 
     </section>
     <section id="fifthpage">
@@ -495,59 +420,24 @@
             <div class="blogs">
                 <div class="sliderblog">
 
+
+                    {% for blog in blog %}
                     <div class="blogs1">
                         <div class="blogimage">
-                            <a href="">
-                                <img src="/images/blog-4.jpg" alt="">
+                            <a href="{{blog.blog_link}}">
+                                <img src="/static/uploads/{{blog.blog_img}}" alt="">
                             </a>
                         </div>
-                        <span>Nancy Bayers – 10 hours ago</span>
-                        <a href="">
-                            <h3>How to make trust your competitive advantage</h3>
+                        <a href="{{blog.blog_link}}">
+                            <h3>{{blog.blog_name}}</h3>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                        <button>read more</button>
+                        <p>{{blog.blog_text}}</p>
+                        <a class="bloglink" href="{{blog.blog_link}}">read more</a>
                     </div>
-                    <div class="blogs1">
-                        <div class="blogimage">
-                            <a href="">
-                                <img src="/images/blog-4.jpg" alt="">
-                            </a>
-                        </div>
-                        <span>Nancy Bayers – 10 hours ago</span>
-                        <a href="">
-                            <h3>How to make trust your competitive advantage</h3>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                        <button>read more</button>
-                    </div>
-                    <div class="blogs1">
-                        <div class="blogimage">
-                            <a href="">
-                                <img src="/images/blog-4.jpg" alt="">
-                            </a>
-                        </div>
-                        <span>Nancy Bayers – 10 hours ago</span>
-                        <a href="">
-                            <h3>How to make trust your competitive advantage</h3>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                        <button>read more</button>
-                    </div>
-                    <div class="blogs1">
-                        <div class="blogimage">
-                            <a href="">
-                                <img src="/images/blog-4.jpg" alt="">
-                            </a>
-                        </div>
-                        <span>Nancy Bayers – 10 hours ago</span>
-                        <a href="">
-                            <h3>How to make trust your competitive advantage</h3>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                        <button>read more</button>
-                    </div>
+
+                    {% endfor %}
                 </div>
+
                 <div class="butn">
 
                 </div>

@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %} {% block content %}
+<h2>Add new service</h2>
+<form action="/admin/opinion/update/{{opinion.id}}" method="POST">
+    <div class="mt-3">
+        <input type="text" class="form-control" value="{{opinion.opinion_text}}" name="opinion_text">
+    </div>
+    <div class="mt-3">
+        <input type="text" class="form-control" placeholder="Service icon" value="{{opinion.opinion_name}}" name="opinion_name">
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+{% endblock %}

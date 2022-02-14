@@ -1,0 +1,44 @@
+{% extends "admin/base.html" %} {% block content %}
+<h2>Add new opinion</h2>
+<form action="/admin/opinion" method="POST" enctype="multipart/form-data">
+    <div class="mt-3">
+
+        <input type="text" class="form-control" placeholder="opinion name" name="opinion_name">
+    </div>
+    <div class="mt-3">
+        <input type="text" class="form-control" placeholder="opinion " name="opinion_text">
+    </div>
+    <div class="mt-3">
+        <input type="file" class="form-control" placeholder="opinion image" name="opinion_img">
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+<hr>
+<h2>All opinions</h2>
+<table class="table table-active">
+    <thead>
+        <tr>
+            <th scope="col">opinion name</th>
+            <th scope="col">opinion link</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for opinion in opinion %}
+
+
+        <tr>
+            <td>{{opinion.opinion_name}}</td>
+            <td>{{opinion.opinion_text}}</td>
+            <td>
+                <a href="/admin/opinion/delete/{{opinion.id}}">Delete</a>
+                <a href="/admin/opinion/update/{{opinion.id}}">Update</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
