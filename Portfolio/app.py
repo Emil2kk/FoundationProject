@@ -1,10 +1,18 @@
 from flask import Flask,render_template,request,redirect
 from flask_sqlalchemy import SQLAlchemy
 import os
+from flask_mail import Mail, Message
 app=Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///portfolio.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'emil2kk2@gmail.com'
+app.config['MAIL_PASSWORD'] = ' Emil2002A'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 db = SQLAlchemy(app)
 from models import *
 @app.route('/')
@@ -219,6 +227,26 @@ def admin_blog_update(id):
         return redirect('/admin/blog')
     return render_template('admin/blogUpdate.html',blog=blog)
 
+@app.route("/admin/contact", methods=["GET", "POST"])
+def admin_contact():
+    from models import Contact
+    from flask_mail import Mail,Message
+    messages=Contact.query.all()
+    if request.method=="POST":
+        mail_name=request.form["mail_name"]
+        mail_address=request.form["mail_address"]
+        mail_message=request.form["mail_message"]
+        Msg=Contact(
+            mail_name=mail_name,
+            mail_message=mail_message,
+            mail_address=mail_address
+        )
+        msg=Message(mail_message, sender=mail_address, recipients = ["emil2kk2@gmail.com"])
+        mail.send(msg)
+        db.session.add(Msg)
+        db.session.commit()
+        return redirect("/")
+    return render_template("admin/contact.html", messages=messages)
 
 
 if __name__=='__main__':

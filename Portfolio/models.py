@@ -35,3 +35,9 @@ class Blog(db.Model):
     blog_link = db.Column(db.String(100))
     blog_img = db.Column(db.String(200))
 
+class Contact(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    mail_name=db.Column(db.String(100))
+    mail_message=db.Column(db.String(100))
+    mail_address=db.Column(db.String(100))
+    
